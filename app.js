@@ -27,11 +27,11 @@ const user = {
 
 app.get('/', (req, res) => { //This will render index.hbs (you can only send 1 res)
     // res.send('<h1>Welcome to my server</h1>') 
-    res.render('index') 
+    res.render('index')
 })
 
 app.get('/contact', (req, res) => {
-    res.render('contact', {user, firstNumber: user.numbers[0]})
+    res.render('contact', { user, firstNumber: user.numbers[0] })
 })
 
 app.get('/about', (req, res) => {
@@ -41,7 +41,7 @@ app.get('/about', (req, res) => {
 
 
 //Listener
-app.listen(PORT, ()=>{
+app.listen(PORT, () => {
     console.log(chalk.bgBlue(`Server active in ${PORT}`))
 })
 
