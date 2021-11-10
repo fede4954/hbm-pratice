@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+
+    <h1>Contact page</h1>
+
+    {{!-- data comes from the passed object --}}
+    <h2>My name is {{user.name}} and I'm {{user.age}} years old</h2>
+    {{#if user.admin}}
+    <p>You're an admin</p>
+    {{/if}}
+
+    {{!-- HBS LOOP --}}
+    {{!-- <ul>
+        {{#each numbers}} 
+        <li>{{this}}</li>
+        {{/each}}
+    </ul> --}}
+
+    <li>{{firstNumber}}</li>
+
+
+</body>
+</html>
