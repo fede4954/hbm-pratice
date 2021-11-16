@@ -6,15 +6,6 @@ const hbs = require('hbs')
 const app = express()
 const PORT = 3000 //Assigning the port to a variable = good pratice
 
-
-
-//View engine setup (middleware)
-app.set('views', __dirname + '/views')
-app.set('view engine', 'hbs')
-
-
-
-//Routes
 const user = {
     name: 'Federico',
     lastName: 'Gómez',
@@ -24,7 +15,12 @@ const user = {
 }
 
 
+//VIEW ENGINE SETUP
+app.set('views', __dirname + '/views')
+app.set('view engine', 'hbs')
 
+
+//ROUTES
 app.get('/', (req, res) => { //This will render index.hbs (you can only send 1 res)
     // res.send('<h1>Welcome to my server</h1>') 
     res.render('index')
@@ -39,8 +35,7 @@ app.get('/about', (req, res) => {
 })
 
 
-
-//Listener
+//SERVER
 app.listen(PORT, () => {
     console.log(chalk.bgBlue(`Server active in ${PORT}`))
 })
